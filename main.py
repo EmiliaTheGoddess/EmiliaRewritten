@@ -1,15 +1,10 @@
 """
 Emilia the helpful assistant
-
-Currently works on GNU/Linux
-To make it work on w*ndows just edit the file paths
-
 """
 
 import speech_recognition as sr
 import os
 from playsound import playsound
-
 import autolisten
 from modules.parsetext import *
 
@@ -42,6 +37,7 @@ def startlistening():
     spokentext = get_audio().lower()
     check(spokentext)
     autolisten.startlistening()
+
 
 if __name__ == "__main__":
     startlistening()

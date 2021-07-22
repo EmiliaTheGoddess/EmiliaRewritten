@@ -1,10 +1,4 @@
 import speech_recognition as sr
-import playsound
-import os
-import webbrowser
-import urllib.request
-import re
-import random
 
 # Function to return spoken text
 import main
@@ -32,12 +26,11 @@ def startlistening():
     while True:
         try:
             text = get_audio().lower()
+            # Speech recognition sometimes can't understand me
             if 'emilia' in text or 'amelia' in text or 'camellia' in text:
-                print("ccc")
                 break
-                return
         except:
-            print("empty")
+            print("Nothing to be understood here.")
     main.startlistening()
 
 
